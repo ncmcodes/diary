@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
 class TagsSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Tags
-        fields = "__all__"
+        fields = ["id", "name"]
 
 
 class DiarySerializer(serializers.ModelSerializer):
@@ -26,4 +26,4 @@ class SingleDiarySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Diary
-        fields = "__all__"
+        fields = ["id", "entry", "created", "last_modified"]
